@@ -19,50 +19,42 @@ const App = () => {
         <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-3'>
-                        {
-                            /* Add Budget component here */
-                            <div className='col-sm'>
-                                <Budget />
-                            </div>
-                        }        
+                <div className='row mt-3'>
+                    <div className='col-sm'>
+                        <Budget />
+                    </div>
 
-                        {
-                            /* Add Remaining component here*/
-                            <div className='col-sm'>
-                                <Remaining />
-                            </div>
-                        }        
+                    <div className='col-sm'>
+                        <Remaining />
+                    </div>
 
-                        {
-                            /* Add ExpenseTotal component here */
-                            <div className='col-sm'>
-                                <ExpenseTotal />
-                            </div>
-                        }        
-                       
-                        {
-                            /* Add ExpenseList component here */
-                            <div className='col-sm'>
-                                <ExpenseList />
-                            </div>
+                    <div className='col-sm'>
+                        <ExpenseTotal />
+                    </div>
 
-                        }         
+                    <div className='col-sm alert' style={{ backgroundColor: 'rgb(147,228,153)', size: 10, color: 'white', fontWeight: 'bold'}}>
+                        <label>Currency</label>
+                        <span>(</span>   
+                        <select style={{ backgroundColor: 'rgb(147,228,153)', border: 'none', outline: 'none', color: 'white', padding: '2px'}}>
+                            <option style={{ padding: '20px'}}>$ Dollar</option>
+                            <option value="£">£ Pound</option>
+                            <option value="€">€ Euro</option>
+                            <option value="₹">₹ Ruppee</option>
+                        </select>
+                        <span>)</span>
+                    </div>
+                </div>
+                <div className='col-sm'>
+                    <ExpenseList />
+                </div>
 
-                        {
-                            /* Add ExpenseItem component here */
-                            <div className='col-sm'>
-                                <ExpenseItem />
-                            </div>
-                        }        
+                <div className='col-sm'>
+                    <ExpenseItem />
+                </div>
 
-                        {
-                            /* Add AllocationForm component here under */
-                            <div className='col-sm'>
-                                <AllocationForm />
-                            </div>
-                        }        
 
+                <div className='col-sm'>
+                    <AllocationForm />
                 </div>
             </div>
         </AppProvider>
